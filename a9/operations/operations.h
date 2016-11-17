@@ -7,9 +7,12 @@ class Operations: public Binops
 {
     friend Binops;
     
-    private:
-		void add(Operations const &rhs);
-		void sub(Operations const &rhs);
+    void add(Operations const &rhs);
+    void sub(Operations const &rhs);
+    
+    public:
+		Operations();
+		~Operations();
 };
 
 #endif

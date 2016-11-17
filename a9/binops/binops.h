@@ -8,6 +8,10 @@ class Binops: public Addition, public Subtraction
 {
     friend Addition;
     friend Subtraction;
+    
+    public:
+		Binops();
+		~Binops();
 };
 
 #endif

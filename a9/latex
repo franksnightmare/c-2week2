@@ -1,4 +1,4 @@
-\section*{Exercise 9, inheritence and friends}
+\section*{Exercise 9, inheritance and friends}
 We had to solve a strange problem where a base class needed access to private functions of a derived class.
 The fundamental problem is how to allow access to private member functions from two derivisions away.
 
