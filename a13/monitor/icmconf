@@ -1,0 +1,4 @@
+#include "../../icmlib"
+
+#define LIBRARY     "tmp"
+
