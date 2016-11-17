@@ -1,6 +1,8 @@
 #ifndef SUBSTRACTION_H
 #define SUBSTRACTION_H
 
+class Operations;
+
 class Substraction
 {
     public:

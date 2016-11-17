@@ -1,0 +1,13 @@
+\section*{Exercise 9, inheritence and friends}
+We had to solve a strange problem where a base class needed access to private functions of a derived class.
+The fundamental problem is how to allow access to private member functions from two derivisions away.
+
+\subsection*{Solution}
+To solve this problem we made \texttt{Addition} and \texttt{Subtraction} friends of \texttt{Binops}.
+Because \texttt{Operations} is derived from \texttt{Binops} this means that the friends of \texttt{Binops} are also friends of \texttt{Operations}.
+So in this way the classes \texttt{Addition} and \texttt{Substraction} can use the private member functions \texttt{add} and \texttt{sub} of \texttt{Operations}.
+
+\subsection*{Code listings}
+\lstinputlisting[caption = addition.h]{src/a9/addition/addition.h}
+\lstinputlisting[caption = binops.h]{src/a9/binops/binops.h}
+\lstinputlisting[caption = substraction.h]{src/a9/subtraction/substraction.h}
