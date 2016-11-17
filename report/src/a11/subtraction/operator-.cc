@@ -3,7 +3,8 @@
 
 using namespace std;
 
-Operations operator-(Operations const &lhs, Operations const &rhs)
+Operations operator-(Operations const &lhs,
+	Operations const &rhs)
 {
 	cout << "binary subtraction\n";
 	Operations copy(lhs);

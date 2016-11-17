@@ -9,6 +9,7 @@ class Addition
         Addition &operator+=(Operations const &rhs);
 };
 
-Operations operator+(Operations const &lhs, Operations const &rhs);
+Operations operator+(Operations const &lhs,
+	Operations const &rhs);
 
 #endif
