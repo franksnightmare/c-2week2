@@ -4,10 +4,10 @@
 #include "../addition/addition.h"
 #include "../subtraction/subtraction.h"
 
-class Binops: public Addition, public Substraction
+class Binops: public Addition, public Subtraction
 {
     friend Addition;
-    friend Substraction;
+    friend Subtraction;
 };
 
 #endif
