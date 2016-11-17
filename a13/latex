@@ -1,0 +1,8 @@
+\section*{Exercise 13, red thread}
+We were tasked with using inheritence to include the \texttt{Limits} class into a number of other classes.
+
+\subsection*{Code listings}
+\lstinputlisting[caption = fighter.h]{src/a13/fighter/fighter.h}
+\lstinputlisting[caption = fighter's altitudeto.cc]{src/a13/fighter/altitudeto.cc}
+\lstinputlisting[caption = monitor.h]{src/a13/monitor/monitor.h}
+\lstinputlisting[caption = time.h]{src/a13/time/time.h}
