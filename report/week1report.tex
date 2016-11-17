@@ -1,0 +1,76 @@
+\documentclass[11pt]{article}
+
+\usepackage{times}
+\usepackage[english]{babel}
+
+% -----------------------------------------------
+% especially use this for you code
+% -----------------------------------------------
+
+\usepackage{courier}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tabularx}
+\usepackage{graphicx}
+
+\definecolor{Gray}{gray}{0.95}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{language=C++,
+	basicstyle = \normalsize\ttfamily,   % the size and fonts that are used
+	tabsize = 2,                    % sets default tabsize
+	breaklines = true,              % sets automatic line breaking
+	keywordstyle=\color{blue}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	commentstyle=\color{mygreen}\ttfamily,
+	numbers=left,
+	keepspaces=true,
+	showspaces=false,
+	showstringspaces=false,
+}
+
+\begin{document}
+
+\title{Programming in C/C++ \\
+       Exercises set two: inheritance
+}
+\date{\today}
+\author{Christiaan Steenkist \\
+Jaime Betancor Valado \\
+Remco Bos \\
+}
+
+\maketitle
+
+\section*{Exercise 12, matrix copying}
+We were tasked with initializing an array with copies of a matrix \texttt{mat} with only a \texttt{new} statement.
+
+\subsection*{Solution}
+Because the default constructor is always called we made a new class that is derived from matrix.
+This \texttt{Copymatrix} holds a static \texttt{Matrix} that is used to initialize the class.
+By returning a \texttt{Matrix} pointer the unnecessary data is sliced off.
+
+\subsection*{Code listings}
+\lstinputlisting[caption = main.ih]{src/a12/main.ih}
+\lstinputlisting[caption = main.h]{src/a12/main.h}
+\lstinputlisting[caption = factory.cc]{src/a12/factory.cc}
+\lstinputlisting[caption = main.cc]{src/a12/main.cc}
+
+\subsubsection*{Copymatrix}
+\lstinputlisting[caption = copymatrix.ih]{src/a12/copymatrix.ih}
+\lstinputlisting[caption = copymatrix.h]{src/a12/copymatrix.h}
+\lstinputlisting[caption = copymatrix1.cc]{src/a12/copymatrix1.cc}
+
+\section*{Exercise 13, red thread}
+We were tasked with using inheritence to include the \texttt{Limits} class into a number of other classes.
+
+\subsection*{Code listings}
+\lstinputlisting[caption = fighter.h]{src/a13/fighter/fighter.h}
+\lstinputlisting[caption = fighter's altitudeto.cc]{src/a13/fighter/altitudeto.cc}
+\lstinputlisting[caption = monitor.h]{src/a13/monitor/monitor.h}
+\lstinputlisting[caption = time.h]{src/a13/time/time.h}
+
+\end{document}
