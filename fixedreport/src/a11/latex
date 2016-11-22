@@ -1,0 +1,19 @@
+\section*{Exercise 10, implementation of compound assignment operators}
+???
+
+\subsection*{Output}
+\begin{lstlisting}
+compound addition
+addition
+compound subtraction
+subtraction
+binary addition
+addition
+binary subtraction
+subtraction
+\end{lstlisting}
+
+
+\subsection*{Code listings}
+\lstinputlisting[caption = operator+=.cc]{src/a10/addition/operator+=.cc}
+\lstinputlisting[caption = operator-=.h]{src/a10/addition/operator-=.cc}

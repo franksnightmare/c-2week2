@@ -1,0 +1,21 @@
+#include "monitor.h"
+
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <fcntl.h>
+
+#include <unistd.h>
+
+#include <iostream>
+#include <fstream>
+#include <sstream>
+
+#include "../time/time.h"
+#include "../registerdata/registerdata.h"
+
+#include "../limits/limits.h"
+#include "../fighter/fighter.h"
+
+
+using namespace std;
+

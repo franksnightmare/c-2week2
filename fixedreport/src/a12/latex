@@ -1,0 +1,18 @@
+\section*{Exercise 12, matrix copying}
+We were tasked with initializing an array with copies of a matrix \texttt{mat} with only a \texttt{new} statement.
+
+\subsection*{Solution}
+Because the default constructor is always called we made a new class that is derived from matrix.
+This \texttt{Copymatrix} holds a static \texttt{Matrix} that is used to initialize the class.
+By returning a \texttt{Matrix} pointer the unnecessary data is sliced off.
+
+\subsection*{Code listings}
+\lstinputlisting[caption = main.ih]{src/a12/main.ih}
+\lstinputlisting[caption = main.h]{src/a12/main.h}
+\lstinputlisting[caption = factory.cc]{src/a12/factory.cc}
+\lstinputlisting[caption = main.cc]{src/a12/main.cc}
+
+\subsubsection*{Copymatrix}
+\lstinputlisting[caption = copymatrix.ih]{src/a12/copymatrix.ih}
+\lstinputlisting[caption = copymatrix.h]{src/a12/copymatrix.h}
+\lstinputlisting[caption = copymatrix1.cc]{src/a12/copymatrix1.cc}
