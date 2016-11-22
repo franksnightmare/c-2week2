@@ -95,20 +95,8 @@ class Matrix
 			Matrix const &right);
 		friend bool operator!=(Matrix const &left,
 			Matrix const &right);
-		
-		class Maker;
 	
 	private:
-};
-
-class Matrix::Maker: public Matrix
-{
-	public:
-		Maker();
-		void setBlueprint(Matrix const *matPtr);
-	
-	private:
-		static Matrix const *d_blueprint;
 };
 
 // Stream operators for exercise 69.
