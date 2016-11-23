@@ -3,14 +3,17 @@
 
 #include "matrix/matrix.h"
 
-class Copy: public Matrix
+namespace MatrixMaker
 {
-	public:
-		Copy();
-		
-		static Matrix const *d_blueprint;
-};
-
-Matrix *factory(Matrix const &mat, size_t count);
+	class CopyMatrix: public Matrix
+	{
+		public:
+			CopyMatrix();
+			
+			static Matrix const *d_blueprint;
+	};
+	
+	Matrix *factory(Matrix const &mat, size_t count);
+}
 
 #endif

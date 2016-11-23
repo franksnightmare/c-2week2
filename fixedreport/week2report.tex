@@ -47,6 +47,11 @@ Remco Bos \\
 \section*{Exercise 9, addition/subtraction hierarchy header files}
 These are the final header files for this class hierarchy.
 
+\subsection*{Design problem}
+The prototypical design problem here is that we want use private members of another class.
+The solution to this is to make \texttt{Operations} friends with \texttt{Addition} and \texttt{Subtraction}.
+This is the solution because there is no other way to carry over friendship like this, friendship is not transitive and not carried over by inheritance.
+
 \subsection*{Code listings}
 \lstinputlisting[caption = addition.ih]{src/a11/addition/addition.ih}
 \lstinputlisting[caption = addition.h]{src/a11/addition/addition.h}
@@ -54,6 +59,8 @@ These are the final header files for this class hierarchy.
 \lstinputlisting[caption = binops.h]{src/a11/binops/binops.h}
 \lstinputlisting[caption = subtraction.ih]{src/a11/subtraction/subtraction.ih}
 \lstinputlisting[caption = subtraction.h]{src/a11/subtraction/subtraction.h}
+\lstinputlisting[caption = operations.ih]{src/a11/operations/operations.ih}
+\lstinputlisting[caption = operations.h]{src/a11/operations/operations.h}
 
 \section*{Exercise 10, compound assignment operators}
 Here we implement the compound assignment operators in the class hierarchy.
@@ -69,10 +76,6 @@ Here we implement the free binary operators in the class hierarchy as well as th
 \lstinputlisting[caption = main.cc]{src/a11/main.cc}
 \lstinputlisting[caption = operator+.cc]{src/a11/addition/operator+.cc}
 \lstinputlisting[caption = operator-.cc]{src/a11/subtraction/operator-.cc}
-
-\subsubsection*{Operation code}
-\lstinputlisting[caption = operations.ih]{src/a11/operations/operations.ih}
-\lstinputlisting[caption = operations.h]{src/a11/operations/operations.h}
 \lstinputlisting[caption = add.cc]{src/a11/operations/add.cc}
 \lstinputlisting[caption = sub.cc]{src/a11/operations/sub.cc}
 
@@ -90,9 +93,8 @@ By returning a \texttt{Matrix} pointer the unnecessary data is sliced off.
 \lstinputlisting[caption = factory.cc]{src/a12/factory.cc}
 \lstinputlisting[caption = main.cc]{src/a12/main.cc}
 
-\subsubsection*{Copymatrix}
-\lstinputlisting[caption = copymatrix.ih]{src/a12/copymatrix.ih}
-\lstinputlisting[caption = copymatrix.h]{src/a12/copymatrix.h}
+\subsubsection*{CopyMatrix}
+\lstinputlisting[caption = copymatrix.h]{src/a12/matrixmaker.h}
 \lstinputlisting[caption = copymatrix1.cc]{src/a12/copymatrix1.cc}
 
 \section*{Exercise 13, red thread}
